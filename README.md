@@ -1,26 +1,31 @@
-🗂️ Clasificador de Residuos con Arduino
-Un sistema inteligente de clasificación de residuos que utiliza visión por computadora y TensorFlow para identificar automáticamente diferentes tipos de desechos y activar LEDs correspondientes mediante Arduino.
+# ♻️ Clasificador de Residuos con Arduino y Visión Artificial
 
-📋 Descripción
-Este proyecto combina machine learning con hardware para crear un clasificador de residuos en tiempo real que:
+Un sistema inteligente que combina **visión por computadora** y **Arduino** para identificar residuos en tiempo real y activar LEDs según su tipo. Este proyecto busca contribuir con la **gestión responsable de residuos** y la protección del medio ambiente.
 
-1.Detecta y clasifica 4 tipos de residuos: Metal, Plástico, Papel y Orgánico
-2.Utiliza la cámara para capturar imágenes en tiempo real
-3.Comunica con Arduino para encender LEDs indicadores según la clasificación
-4.Interfaz simple controlada por teclas (Espacio para clasificar, ESC para salir)
+---
 
-🏗️ Estructura del Proyecto
+## 🧠 ¿Qué hace este proyecto?
 
+- Detecta y clasifica 4 tipos de residuos: **Metal**, **Plástico**, **Papel** y **Orgánico**
+- Captura imágenes en tiempo real mediante cámara
+- Usa un modelo de Machine Learning con TensorFlow (formato `.keras`)
+- Envía comandos al **Arduino Uno** para activar un **LED específico**
+- Se controla con teclado:  
+  `[ESPACIO]` para clasificar | `[ESC]` para salir
+
+---
+
+## 🏗️ Estructura del Proyecto
 waste_classifier/
-├── waste_classifier_model.keras       → Modelo entrenado de clasificación
-├── class_names.json                   → Nombres de las clases del modelo
-├── requirements.txt                   → Dependencias del proyecto
-├── README.md                          → Este archivo
+├── waste_classifier_model.keras # Modelo entrenado
+├── class_names.json # Clases del modelo
+├── requirements.txt # Dependencias de Python
+├── README.md # Este archivo
 └── src/
-    ├── main.py                        → Punto de entrada del programa
-    ├── camera.py                      → Captura desde la cámara
-    ├── gui.py                         → Interfaz gráfica y comunicación Arduino
-    └── classifier_stub.py             → Modelo, preprocesamiento y predicción
+├── main.py # Punto de entrada
+├── camera.py # Captura de imágenes
+├── gui.py # Interfaz y control serial
+└── classifier_stub.py # Modelo y predicción
 
 🚀 Características
 
