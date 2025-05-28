@@ -10,6 +10,7 @@ Este proyecto combina machine learning con hardware para crear un clasificador d
 4.Interfaz simple controlada por teclas (Espacio para clasificar, ESC para salir)
 
 🏗️ Estructura del Proyecto
+
 waste_classifier/
 ├── waste_classifier_model.keras       → Modelo entrenado de clasificación
 ├── class_names.json                   → Nombres de las clases del modelo
