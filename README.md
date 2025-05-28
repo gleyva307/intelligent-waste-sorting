@@ -63,6 +63,7 @@ pip install -r requirements.txt
 3. Cargar código en Arduino
 Abre el Arduino IDE y carga el siguiente código:
 
+```arduino
 void setup() {
   pinMode(2, OUTPUT); // Metal
   pinMode(3, OUTPUT); // Plástico
@@ -70,6 +71,7 @@ void setup() {
   pinMode(5, OUTPUT); // Orgánico
   Serial.begin(9600);
 }
+
 void loop() {
   if (Serial.available() > 0) {
     char input = Serial.read();
@@ -82,13 +84,14 @@ void loop() {
     apagarTodos();
   }
 }
+
 void apagarTodos() {
   digitalWrite(2, LOW);
   digitalWrite(3, LOW);
   digitalWrite(4, LOW);
   digitalWrite(5, LOW);
 }
-
+```
 
 4. Verificar puerto serial
 
