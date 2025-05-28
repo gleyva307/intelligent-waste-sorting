@@ -16,16 +16,18 @@ Un sistema inteligente que combina **visión por computadora** y **Arduino** par
 ---
 
 ## 🏗️ Estructura del Proyecto
+```
 waste_classifier/
-├── waste_classifier_model.keras # Modelo entrenado
-├── class_names.json # Clases del modelo
-├── requirements.txt # Dependencias de Python
-├── README.md # Este archivo
+├── waste_classifier_model.keras   # Modelo entrenado
+├── class_names.json               # Clases del modelo
+├── requirements.txt               # Dependencias de Python
+├── README.md                      # Este archivo
 └── src/
-├── main.py # Punto de entrada
-├── camera.py # Captura de imágenes
-├── gui.py # Interfaz y control serial
-└── classifier_stub.py # Modelo y predicción
+    ├── main.py                    # Punto de entrada
+    ├── camera.py                  # Captura de imágenes
+    ├── gui.py                     # Interfaz y control serial
+    └── classifier_stub.py         # Modelo y predicción
+```
 
 🚀 Características
 
