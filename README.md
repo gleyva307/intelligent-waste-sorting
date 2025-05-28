@@ -19,38 +19,47 @@ Un sistema inteligente que combina **visión por computadora** y **Arduino** par
 ```
 waste_classifier/
 ├── waste_classifier_model.keras   # Modelo entrenado
-├── class_names.json               # Clases del modelo
+├── class_names.json               # Clases del modelo, este se genera al ejecutar train.py
 ├── requirements.txt               # Dependencias de Python
 ├── README.md                      # Este archivo
 └── src/
     ├── main.py                    # Punto de entrada
     ├── camera.py                  # Captura de imágenes
     ├── gui.py                     # Interfaz y control serial
+    ├── train.py                   # Entrenamiento genera un modelo .keras y un .json con las clases
     └── classifier_stub.py         # Modelo y predicción
 ```
 
-🚀 Características
+## 🚀 Características
 
-✅ Clasificación en tiempo real con modelo TensorFlow Keras
-✅ Alta precisión con umbral de confianza del 85%
-✅ Comunicación serial con Arduino
-✅ Control por eventos (procesa solo al presionar teclas)
-✅ 4 categorías de residuos: Metal, Plástico, Papel, Orgánico
-✅ Indicadores LED físicos para cada categoría
-✅ Interfaz limpia con OpenCV
+- ✅ Clasificación en tiempo real con modelo TensorFlow Keras  
+- ✅ Alta precisión con umbral de confianza del 85%  
+- ✅ Comunicación serial con Arduino  
+- ✅ Control por eventos (procesa solo al presionar teclas)  
+- ✅ 4 categorías de residuos: Metal, Plástico, Papel, Orgánico  
+- ✅ Indicadores LED físicos para cada categoría  
+- ✅ Interfaz limpia con OpenCV  
 
-🛠️ Componentes de Hardware
-Arduino
-Microcontrolador: Arduino UnoR3
-Puerto serial: COM12 (configurable)
-Baudrate: 9600
+---
 
-LEDs y Conexiones
-Categoría   PIN     LED     Comando
-Metal        2      🟡       'M'
-Plástico     3      🔴       'P'
-Papel        4      🟢       'L'
-Orgánico     5      ⚪       'O'
+## 🛠️ Componentes de Hardware
+
+**Arduino**
+
+- Microcontrolador: Arduino UnoR3  
+- Puerto serial: `COM12` (configurable)  
+- Baudrate: `9600`  
+
+---
+
+## 💡 LEDs y Conexiones
+
+| Categoría | PIN LED | Color | Comando |
+|-----------|---------|-------|---------|
+| Metal     | 2       | 🟡     | `'M'`   |
+| Plástico  | 3       | 🔴     | `'P'`   |
+| Papel     | 4       | 🟢     | `'L'`   |
+| Orgánico  | 5       | ⚪     | `'O'`   |
 
 Resistencias
 
