@@ -70,34 +70,25 @@ void setup() {
   pinMode(5, OUTPUT); // Orgánico
   Serial.begin(9600);
 }
-
 void loop() {
   if (Serial.available() > 0) {
     char input = Serial.read();
-
-    // Apagar todos antes de encender uno
     apagarTodos();
-
-    // Encender el LED correspondiente
-    if (input == 'M') digitalWrite(2, HIGH); // Metal
-    else if (input == 'P') digitalWrite(3, HIGH); // Plástico
-    else if (input == 'L') digitalWrite(4, HIGH); // Papel
-    else if (input == 'O') digitalWrite(5, HIGH); // Orgánico
-
-    // Mantener encendido por 2 segundos
+    if (input == 'M') digitalWrite(2, HIGH);
+    else if (input == 'P') digitalWrite(3, HIGH);
+    else if (input == 'L') digitalWrite(4, HIGH);
+    else if (input == 'O') digitalWrite(5, HIGH);
     delay(2000);
-
-    // Apagar todos los LEDs
     apagarTodos();
   }
 }
-
 void apagarTodos() {
   digitalWrite(2, LOW);
   digitalWrite(3, LOW);
   digitalWrite(4, LOW);
   digitalWrite(5, LOW);
 }
+
 
 4. Verificar puerto serial
 
