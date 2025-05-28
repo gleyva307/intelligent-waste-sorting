@@ -132,7 +132,7 @@ Probar comunicación con Arduino
 ¡IMPORTANTE!
 Antes de usar la aplicación principal, ejecuta este script independiente para verificar que los LEDs y la comunicación serial funcionen correctamente:
 Crea un archivo llamado test_arduino.py y ejecuta:
-
+```python
 import serial
 import time
 
@@ -143,7 +143,7 @@ for letra in ['M', 'P', 'L', 'O']:
     arduino.write(letra.encode())
     print("Enviado:", letra)
     time.sleep(2)
-
+```
 ¿Qué debe pasar?
 
 LED Amarillo (Metal) se enciende 2 segundos → se apaga
